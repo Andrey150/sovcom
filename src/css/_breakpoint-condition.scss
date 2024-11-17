@@ -1,0 +1,20 @@
+@use './breakpoint' as bp;
+
+.desktop {
+  @include bp.tablet {
+    display: none !important;
+  }
+}
+.tablet {
+  @include bp.desktop {
+    display: none !important;
+  }
+}
+
+.mobile {
+  display: none !important;
+
+  @include bp.mobile {
+    display: block;
+  }
+}
